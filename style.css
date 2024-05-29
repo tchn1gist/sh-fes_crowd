@@ -1,0 +1,256 @@
+body {
+  background-color:rgb(236, 236, 236);
+  letter-spacing: 0.05em;
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+
+}
+.midashi {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.wrapper {
+  display: flex;
+}
+.side {
+  font-size: 14px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(82, 82, 82);
+  letter-spacing: 0.1em;
+  line-height:30px;
+  width: 20%;
+  margin-left: 2%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 2%;
+  max-width: 1150px;
+  min-width: 350px;
+  margin-right: 2%;
+}
+.main {
+  flex: 1;
+}
+
+.article {
+  font-size: 14px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(82, 82, 82);
+  letter-spacing: 0.1em;
+  line-height:30px;
+  width: 90%;
+  margin-left: 2%;
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 2%;
+  max-width: 1150px;
+  min-width: 350px;
+  padding-right: 10px;
+
+}
+
+.skill {
+  padding: 2px;
+  padding-left: 10px;
+  letter-spacing: 0.1em
+}
+
+.midashi2 {
+  padding: 15px 15px 15px 20px;
+}
+
+.honbun {
+  padding: 1.5px;
+  letter-spacing: 0.1em
+}
+
+.icons {
+  margin-left: 1%;
+  margin-right: 2%;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.iconshadow {
+  filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.6));
+}
+
+.filterWrap{
+  display: flex;
+  background-color: #f1f1f1;
+  padding: 30px;
+  
+  select{
+    margin-right: 2em;
+  }
+}
+
+.item {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+#wrapper_shuffle {
+
+	margin: 0 auto;
+
+	padding-bottom: 60px;
+}
+
+
+
+.alpha {
+
+    zoom: 1;
+    line-height: 1;
+}
+
+.alpha:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.active {
+
+}
+
+#btn {
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+#btn li {
+	float: left;
+	margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 14px;
+	cursor: pointer;
+}
+
+#animationList {
+	overflow: hidden;
+}
+
+#animationList li {
+	width: 150px;
+	height: 230px;
+	padding: 10px;
+	float: left;
+	color: #fff;
+}
+
+#animationList li span {
+	display: block;
+	width: 100px;
+	height: 230px;
+	padding: 10px;
+}
+
+.red {
+	background-color: #cf0000;
+}
+
+.blue {
+	background-color: #0208da;
+}
+
+.green {
+	background-color: #2baa08;
+}
+
+.yellow {
+	background-color: #e8ec04;
+}
+
+*/
+/* html5
+
+
+/* Reset
+------------------------------------------------------------*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+address, em, strong, th {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
+hr, legend {
+
+}
+
+
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+
+/* Fonts
+------------------------------------------------------------*/
+
+
+/* clearfix
+------------------------------------------------------------*/
+.clearfix:after {
+  content: "";
+
+  font-size: 0;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+
+.pagetop {
+	color: #fff;
+	background-color: rgba(98, 98, 98, 0.38);
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 1.5rem;
+  border-radius: 1000px;
+  padding: 20px;
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
