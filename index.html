@@ -16,31 +16,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.3"></script>
         <script src="./jquery.shuffle.min.js"></script>
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.3"></script>
 
         <script src="./shuffle.min.js"></script>
-        <script>
-            function showRestTime() {
-                const now = new Date();
-                const goal = new Date(2025, 5, 7, 11, 00);
 
-                const restMillisecond = goal.getTime() - now.getTime();
-                const day = Math.floor(restMillisecond / 1000 / 60 / 60 / 24);
-                const hour = Math.floor(restMillisecond / 1000 / 60 / 60) % 24;
-                const minute = Math.floor(restMillisecond / 1000 / 60) % 60;
-                const second = Math.floor(restMillisecond / 1000) % 60;
-
-                document.getElementById('day').textContent = day;
-                document.getElementById('hour').textContent = hour;
-                document.getElementById('minute').textContent = String(minute).padStart(2, '0');
-                document.getElementById('second').textContent = String(second).padStart(2, '0');
-                }
-
-                setInterval(showRestTime, 1000);
-        </script>
         <script>
             $(function() {
                 $('#btn li').on('click', function() {
@@ -143,12 +124,12 @@
     <body class="bg-gray-100 ">
         <nav class="bg-black border-gray-200 dark:bg-gray-900 fixed top-0 left-0 right-0 z-10">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://www.sh-fes.com/" class="flex items-center">
+            <a href="https://www.crowd.sh-fes.com/" class="flex items-center">
                 <img src="./a.png" class="h-8 mr-3" alt="shiori_logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">栄東祭混雑度確認サイト</span>
                 <div class="text-gray-50 text-right"></div></div>
             </a>
-              <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+              <div style=""class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
                 <div class="relative mt-3 md:hidden">
                   <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -164,20 +145,14 @@
           <div class="py-8"></div>
           
           <div class="max-w-5xl mx-auto bg-white p-4 rounded-lg shadow-lg">
-            <h1 class="text-2xl font-bold mb-2">当日までお待ちください...</h1>
+            <h1 class="text-2xl font-bold mb-2">混雑度確認サイト</h1>
             <div class="border-b border-gray-400"></div>
-            <p class="text-gray-700 mt-2">栄東祭当日の，各教室の混雑度をリアルタイムで確認することができます.<br>ぜひ検索してご活用ください.<br></p><br><br>
-            <p class="text-red-500 mt-2"></p>
-            <p class="text-red-500 mt-2"></p>
-            <p>栄東祭開催まで...</p><h4>
-                <p class="timer">残り
-                <span id="day"></span>日と
-                <span id="hour"></span>時間
-                <span id="minute"></span>分
-                <span id="second"></span>秒
-            </h4></p>
+            <p class="text-gray-700 mt-2">混雑が予想される出展の混雑度をリアルタイムで確認することができます。<br>絞り込み検索が可能です。<br></p>
+            <p class="text-red-500 mt-2">＊通信状況によっては，更新ができない場合がありますがご了承ください。</p>
+            <p class="text-red-500 mt-2">＊屋外の模擬店や，控室，一部の教室は混雑度をご覧になれません。</p>
             <div class="mt-3 flex">
-                <div class="w-1/2"><a href="https://www.sakaehigashi.ed.jp/news/2025/05/post-525.html"><button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-800 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">栄東祭 HP へ</button></a></div>
+                <div class="w-1/2"><a href="#howto"><button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">詳しい利用方法</button></a></div>
+                <div class="w-1/2"><a href="https://www.sh-fes.com/"><button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-800 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">栄東祭 HP へ</button></a></div>
             </div>
           </div>
           <div class="py-8"></div>
@@ -228,10 +203,1703 @@
             }
         </script>
 
+        <!-- shuffle_js　組み込み始-->
+        <div class="wrapper" style="flex-wrap: wrap;">
+            <div class="main" id="introduce">
+                <div class="article max-w-5xl mx-auto" id="portfolio">
+                    <div id="wrapper_shuffle">
+                        <h2 style="padding-left: 10px; padding-bottom: 2px;"><b>ただいまの混雑度</b></h2>
+                        <ul id="btn">
+                            <li data-group="all" class="active alpha">ALL</li><br>
+                            <!--junre-->
+                            <li data-group="junre_1" class="alpha">ステージ企画</li>
+                            <li data-group="junre_2" class="alpha">喫茶/食堂</li>                            
+                            <li data-group="junre_3" class="alpha">模擬店</li>
+                            <li data-group="junre_4" class="alpha">相談</li>
+                            <li data-group="junre_5" class="alpha">休憩</li>
+                            <li data-group="junre_6" class="alpha">購買</li>
+                            <!--place-->
+                            <li data-group="place_1" class="alpha">屋内</li>
+                            <li data-group="place_2" class="alpha">屋外</li>
+                        </ul>
+                        <ul id="animationList">
+                            <!--_2025_栄東祭_混雑度表示システム_
 
+                            ["ステージ企画", "喫茶/食堂", "模擬店", "相談", "休憩", "購買"]
+                            ["屋内", "屋外"]
+
+                            No.01 : 講堂
+                                    講堂棟
+                                    ["ステージ企画", "屋内"]
+                            No.02 : 体育館
+                                    体育館棟
+                                    ["ステージ企画", "屋内"]
+                            No.03 : CCホール
+                                    3校舎
+                                    ["ステージ企画", "屋内"]
+                            No.04 : 食堂
+                                    1階ピロティ
+                                    ["喫茶/食堂", "屋内"]
+                            No.05 : 入試相談
+                                    1101
+                                    ["相談", "屋内"]
+                            No.06 : 高3-1
+                                    1307
+                                    ["喫茶/食堂", "屋内"]
+                            No.07 : 高3-2
+                                    1308
+                                    ["喫茶/食堂", "屋内"]
+                            No.09 : 高3-10
+                                    1310
+                                    ["喫茶/食堂", "屋内"]
+                            No.08 : 高3-6
+                                    1407
+                                    ["喫茶/食堂", "屋内"]
+                            No.10 : 高3-12
+                                    1408
+                                    ["喫茶/食堂", "屋内"]
+                            No.11 : 高3-14
+                                    1410
+                                    ["喫茶/食堂", "屋内"]
+                            No.12 : 高3-3
+                                    駐車場
+                                    ["模擬店", "屋外"]
+                            No.13 : 高3-4
+                                    駐車場
+                                    ["模擬店", "屋外"]
+                            No.14 : 高3-5
+                                    駐車場
+                                    ["模擬店", "屋外"]
+                            No.15 : 高3-7
+                                    駐車場
+                                    ["模擬店", "屋外"]
+                            No.16 : 高3-8
+                                    駐車場
+                                    ["模擬店", "屋外"]
+                            No.17 : 高3-9
+                                    駐車場
+                                    ["模擬店", "屋外"]
+                            No.18 : 高3-11
+                                    駐車場
+                                    ["模擬店", "屋外"]
+                            No.19 : 高3-13
+                                    駐車場
+                                    ["模擬店", "屋外"]
+                            No.20 : 保護者休憩室1
+                                    1309
+                                    ["休憩", "屋内"]
+                            No.21 : 保護者休憩室2
+                                    1409
+                                    ["休憩", "屋内"]
+                            No.22 : 購買
+                                    1階ピロティ
+                                    ["購買", "屋内"]
+                            -->
+
+                            <!--No.01-->
+                            <!--講堂-->
+                            <!--講堂棟 ["ステージ企画", "屋内"]-->
+                            <li data-groups='["junre_1", "place_1"]'>
+                                <div class="card" width="120px" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">講堂</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue1 = data.values[1][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath1;
+                                                console.log(jsonValue1);
+                                                imgPathBase1 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt1 = '';
+                                                switch (jsonValue1) {
+                                                    case "1":
+                                                        imgPath1 = imgPathBase1 + "1.webp";
+                                                        imgAlt1 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath1 = imgPathBase1 + "2.webp";
+                                                        imgAlt1 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath1 = imgPathBase1 + "3.webp";
+                                                        imgAlt1 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath1 = imgPathBase1 + "4.webp";
+                                                        imgAlt1 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath1 = imgPathBase1 + "5.webp";
+                                                        imgAlt1 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath1 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml1;
+                                                if (imgPath1) {
+                                                    imageHtml1 = `<div><img src="${imgPath1}" alt="${imgAlt1}" ></div>`;
+                                                    console.log('1成功');
+                                                } else {
+                                                    imageHtml1 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('1エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv1 = document.getElementById("crowding1");
+                                                 crowdDiv1.innerHTML = imageHtml1;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding1"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">講堂棟</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.2-->
+                            <!--体育館-->
+                            <!--体育館棟 ["ステージ企画", "屋内"]-->
+                            <li data-groups='["junre_1", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">体育館</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue2 = data.values[2][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath2;
+                                                console.log(jsonValue2);
+                                                imgPathBase2 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt2 = '';
+                                                switch (jsonValue2) {
+                                                    case "1":
+                                                        imgPath2 = imgPathBase2 + "1.webp";
+                                                        imgAlt2 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath2 = imgPathBase2 + "2.webp";
+                                                        imgAlt2 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath2 = imgPathBase2 + "3.webp";
+                                                        imgAlt2 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath2 = imgPathBase2 + "4.webp";
+                                                        imgAlt2 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath2 = imgPathBase2 + "5.webp";
+                                                        imgAlt2 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath2 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml2;
+                                                if (imgPath2) {
+                                                    imageHtml2 = `<div><img src="${imgPath2}" alt="${imgAlt2}" ></div>`;
+                                                    console.log('2成功');
+                                                } else {
+                                                    imageHtml2 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('2エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv2 = document.getElementById("crowding2");
+                                                 crowdDiv2.innerHTML = imageHtml2;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding2"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">体育館棟</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.3-->
+                            <!--CCホール-->
+                            <!--3校舎2階 ["ステージ企画", "屋内"]-->
+                            <li data-groups='["junre_1", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">CCホール</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue3 = data.values[3][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath3;
+                                                console.log(jsonValue3);
+                                                imgPathBase3 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt3 = '';
+                                                switch (jsonValue3) {
+                                                    case "1":
+                                                        imgPath3 = imgPathBase3 + "1.webp";
+                                                        imgAlt3 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath3 = imgPathBase3 + "2.webp";
+                                                        imgAlt3 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath3 = imgPathBase3 + "3.webp";
+                                                        imgAlt3 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath3 = imgPathBase3 + "4.webp";
+                                                        imgAlt3 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath3 = imgPathBase3 + "5.webp";
+                                                        imgAlt3 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath3 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml3;
+                                                if (imgPath3) {
+                                                    imageHtml3 = `<div><img src="${imgPath3}" alt="${imgAlt3}" ></div>`;
+                                                    console.log('3成功');
+                                                } else {
+                                                    imageHtml3 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('3エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv3 = document.getElementById("crowding3");
+                                                 crowdDiv3.innerHTML = imageHtml3;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding3"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">3校舎2階</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.4-->
+                            <!--食堂-->
+                            <!--1階ピロティ ["喫茶/食堂", "屋内"]-->
+                            <li data-groups='["junre_2", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">食堂</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue4 = data.values[4][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath4;
+                                                console.log(jsonValue4);
+                                                imgPathBase4 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt4 = '';
+                                                switch (jsonValue4) {
+                                                    case "1":
+                                                        imgPath4 = imgPathBase4 + "1.webp";
+                                                        imgAlt4 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath4 = imgPathBase4 + "2.webp";
+                                                        imgAlt4 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath4 = imgPathBase4 + "3.webp";
+                                                        imgAlt4 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath4 = imgPathBase4 + "4.webp";
+                                                        imgAlt4 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath4 = imgPathBase4 + "5.webp";
+                                                        imgAlt4 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath4 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml4;
+                                                if (imgPath4) {
+                                                    imageHtml4 = `<div><img src="${imgPath4}" alt="${imgAlt4}" ></div>`;
+                                                    console.log('4成功');
+                                                } else {
+                                                    imageHtml4 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('4エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv4 = document.getElementById("crowding4");
+                                                 crowdDiv4.innerHTML = imageHtml4;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding4"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1階ﾋﾟﾛﾃｨ</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.5-->
+                            <!--入試相談-->
+                            <!--1101 ["相談", "屋内"]-->
+                            <li data-groups='["junre_4", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">入試相談</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue5 = data.values[5][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath5;
+                                                console.log(jsonValue5);
+                                                imgPathBase5 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt5 = '';
+                                                switch (jsonValue5) {
+                                                    case "1":
+                                                        imgPath5 = imgPathBase5 + "1.webp";
+                                                        imgAlt5 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath5 = imgPathBase5 + "2.webp";
+                                                        imgAlt5 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath5 = imgPathBase5 + "3.webp";
+                                                        imgAlt5 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath5 = imgPathBase5 + "4.webp";
+                                                        imgAlt5 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath5 = imgPathBase5 + "5.webp";
+                                                        imgAlt5 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath5 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml5;
+                                                if (imgPath5) {
+                                                    imageHtml5 = `<div><img src="${imgPath5}" alt="${imgAlt5}" ></div>`;
+                                                    console.log('5成功');
+                                                } else {
+                                                    imageHtml5 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('5エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv5 = document.getElementById("crowding5");
+                                                 crowdDiv5.innerHTML = imageHtml5;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding5"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1101教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.6-->
+                            <!--高3-1-->
+                            <!--1307 ["喫茶/食堂", "屋内"]-->
+                            <li data-groups='["junre_2", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-1</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue6 = data.values[6][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath6;
+                                                console.log(jsonValue6);
+                                                imgPathBase6 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt6 = '';
+                                                switch (jsonValue6) {
+                                                    case "1":
+                                                        imgPath6 = imgPathBase6 + "1.webp";
+                                                        imgAlt6 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath6 = imgPathBase6 + "2.webp";
+                                                        imgAlt6 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath6 = imgPathBase6 + "3.webp";
+                                                        imgAlt6 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath6 = imgPathBase6 + "4.webp";
+                                                        imgAlt6 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath6 = imgPathBase6 + "5.webp";
+                                                        imgAlt6 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath6 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml6;
+                                                if (imgPath6) {
+                                                    imageHtml6 = `<div><img src="${imgPath6}" alt="${imgAlt6}" ></div>`;
+                                                    console.log('6成功');
+                                                } else {
+                                                    imageHtml6 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('6エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv6 = document.getElementById("crowding6");
+                                                 crowdDiv6.innerHTML = imageHtml6;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding6"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1307教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.7-->
+                            <!--高3-2-->
+                            <!--1308 ["喫茶/食堂", "屋内"]-->
+                            <li data-groups='["junre_2", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-2</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.gooyyleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue7 = data.values[7][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath7;
+                                                console.log(jsonValue7);
+                                                imgPathBase7 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt7 = '';
+                                                switch (jsonValue7) {
+                                                    case "1":
+                                                        imgPath7 = imgPathBase7 + "1.webp";
+                                                        imgAlt7 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath7 = imgPathBase7 + "2.webp";
+                                                        imgAlt7 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath7 = imgPathBase7 + "3.webp";
+                                                        imgAlt7 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath7 = imgPathBase7 + "4.webp";
+                                                        imgAlt7 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath7 = imgPathBase7 + "5.webp";
+                                                        imgAlt7 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath7 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml7;
+                                                if (imgPath7) {
+                                                    imageHtml7 = `<div><img src="${imgPath7}" alt="${imgAlt7}" ></div>`;
+                                                    console.log('7成功');
+                                                } else {
+                                                    imageHtml7 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('7エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv7 = document.getElementById("crowding7");
+                                                 crowdDiv7.innerHTML = imageHtml7;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding7"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1308教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.8-->
+                            <!--高3-10-->
+                            <!--1310 ["喫茶/食堂", "屋内"]-->
+                            <li data-groups='["junre_2", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-10</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue8 = data.values[8][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath8;
+                                                console.log(jsonValue8);
+                                                imgPathBase8 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt8 = '';
+                                                switch (jsonValue8) {
+                                                    case "1":
+                                                        imgPath8 = imgPathBase8 + "1.webp";
+                                                        imgAlt8 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath8 = imgPathBase8 + "2.webp";
+                                                        imgAlt8 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath8 = imgPathBase8 + "3.webp";
+                                                        imgAlt8 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath8 = imgPathBase8 + "4.webp";
+                                                        imgAlt8 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath8 = imgPathBase8 + "5.webp";
+                                                        imgAlt8 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath8 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml8;
+                                                if (imgPath8) {
+                                                    imageHtml8 = `<div><img src="${imgPath8}" alt="${imgAlt8}" ></div>`;
+                                                    console.log('8成功');
+                                                } else {
+                                                    imageHtml8 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('8エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv8 = document.getElementById("crowding8");
+                                                 crowdDiv8.innerHTML = imageHtml8;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding8"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1310教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.9-->
+                            <!--高3-6-->
+                            <!--1407 ["喫茶/食堂", "屋内"]-->
+                            <li data-groups='["floor_4", "build_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-6</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue9 = data.values[9][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath9;
+                                                console.log(jsonValue9);
+                                                imgPathBase9 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt9 = '';
+                                                switch (jsonValue9) {
+                                                    case "1":
+                                                        imgPath9 = imgPathBase9 + "1.webp";
+                                                        imgAlt9 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath9 = imgPathBase9 + "2.webp";
+                                                        imgAlt9 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath9 = imgPathBase9 + "3.webp";
+                                                        imgAlt9 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath9 = imgPathBase9 + "4.webp";
+                                                        imgAlt9 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath9 = imgPathBase9 + "5.webp";
+                                                        imgAlt9 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath9 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml9;
+                                                if (imgPath9) {
+                                                    imageHtml9 = `<div><img src="${imgPath9}" alt="${imgAlt9}" ></div>`;
+                                                    console.log('9成功');
+                                                } else {
+                                                    imageHtml9 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('9エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv9 = document.getElementById("crowding9");
+                                                 crowdDiv9.innerHTML = imageHtml9;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding9"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1407教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.10-->
+                            <!--高3-12-->
+                            <!--1408 ["喫茶/食堂", "屋内"]-->
+                            <li data-groups='["junre_2", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-12</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue10 = data.values[10][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath10;
+                                                console.log(jsonValue10);
+                                                imgPathBase10 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt10 = '';
+                                                switch (jsonValue10) {
+                                                    case "1":
+                                                        imgPath10 = imgPathBase10 + "1.webp";
+                                                        imgAlt10 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath10 = imgPathBase10 + "2.webp";
+                                                        imgAlt10 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath10 = imgPathBase10 + "3.webp";
+                                                        imgAlt10 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath10 = imgPathBase10 + "4.webp";
+                                                        imgAlt10 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath10 = imgPathBase10 + "5.webp";
+                                                        imgAlt10 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath10 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml10;
+                                                if (imgPath10) {
+                                                    imageHtml10 = `<div><img src="${imgPath10}" alt="${imgAlt10}" ></div>`;
+                                                    console.log('10成功');
+                                                } else {
+                                                    imageHtml10 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('10エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv10 = document.getElementById("crowding10");
+                                                 crowdDiv10.innerHTML = imageHtml10;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding10"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1408教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.11-->
+                            <!--高3-14-->
+                            <!--1410 ["喫茶/食堂", "屋内"]-->
+                            <li data-groups='["junre_2", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-14</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue11 = data.values[11][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath11;
+                                                console.log(jsonValue11);
+                                                imgPathBase11 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt11 = '';
+                                                switch (jsonValue11) {
+                                                    case "1":
+                                                        imgPath11 = imgPathBase11 + "1.webp";
+                                                        imgAlt11 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath11 = imgPathBase11 + "2.webp";
+                                                        imgAlt11 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath11 = imgPathBase11 + "3.webp";
+                                                        imgAlt11 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath11 = imgPathBase11 + "4.webp";
+                                                        imgAlt11 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath11 = imgPathBase11 + "5.webp";
+                                                        imgAlt11 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath11 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml11;
+                                                if (imgPath11) {
+                                                    imageHtml11 = `<div><img src="${imgPath11}" alt="${imgAlt11}" ></div>`;
+                                                    console.log('11成功');
+                                                } else {
+                                                    imageHtml11 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('11エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv11 = document.getElementById("crowding11");
+                                                 crowdDiv11.innerHTML = imageHtml11;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding11"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1410教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.12-->
+                            <!--高3-3-->
+                            <!--駐車場 ["模擬店", "屋外"]-->
+                            <li data-groups='["junre_3", "place_2"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-3</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue12 = data.values[12][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath12;
+                                                console.log(jsonValue12);
+                                                imgPathBase12 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt12 = '';
+                                                switch (jsonValue12) {
+                                                    case "1":
+                                                        imgPath12 = imgPathBase12 + "1.webp";
+                                                        imgAlt12 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath12 = imgPathBase12 + "2.webp";
+                                                        imgAlt12 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath12 = imgPathBase12 + "3.webp";
+                                                        imgAlt12 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath12 = imgPathBase12 + "4.webp";
+                                                        imgAlt12 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath12 = imgPathBase12 + "5.webp";
+                                                        imgAlt12 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath12 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml12;
+                                                if (imgPath12) {
+                                                    imageHtml12 = `<div><img src="${imgPath12}" alt="${imgAlt12}" ></div>`;
+                                                    console.log('12成功');
+                                                } else {
+                                                    imageHtml12 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('12エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv12 = document.getElementById("crowding12");
+                                                 crowdDiv12.innerHTML = imageHtml12;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding12"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">駐車場</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.13-->
+                            <!--高3-4-->
+                            <!--駐車場 ["模擬店", "屋外"]-->
+                            <li data-groups='["junre_3", "place_2"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-4</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue13 = data.values[13][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath13;
+                                                console.log(jsonValue13);
+                                                imgPathBase13 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt13 = '';
+                                                switch (jsonValue13) {
+                                                    case "1":
+                                                        imgPath13 = imgPathBase13 + "1.webp";
+                                                        imgAlt13 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath13 = imgPathBase13 + "2.webp";
+                                                        imgAlt13 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath13 = imgPathBase13 + "3.webp";
+                                                        imgAlt13 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath13 = imgPathBase13 + "4.webp";
+                                                        imgAlt13 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath13 = imgPathBase13 + "5.webp";
+                                                        imgAlt13 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath13 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml13;
+                                                if (imgPath13) {
+                                                    imageHtml13 = `<div><img src="${imgPath13}" alt="${imgAlt13}" ></div>`;
+                                                    console.log('13成功');
+                                                } else {
+                                                    imageHtml13 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('13エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv13 = document.getElementById("crowding13");
+                                                 crowdDiv13.innerHTML = imageHtml13;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding13"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">駐車場</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.14-->
+                            <!--高3-5-->
+                            <!--駐車場 ["模擬店", "屋外"]-->
+                            <li data-groups='["junre_3", "place_2"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-5</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue14 = data.values[14][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath14;
+                                                console.log(jsonValue14);
+                                                imgPathBase14 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt14 = '';
+                                                switch (jsonValue14) {
+                                                    case "1":
+                                                        imgPath14 = imgPathBase14 + "1.webp";
+                                                        imgAlt14 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath14 = imgPathBase14 + "2.webp";
+                                                        imgAlt14 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath14 = imgPathBase14 + "3.webp";
+                                                        imgAlt14 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath14 = imgPathBase14 + "4.webp";
+                                                        imgAlt14 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath14 = imgPathBase14 + "5.webp";
+                                                        imgAlt14 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath14 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml14;
+                                                if (imgPath14) {
+                                                    imageHtml14 = `<div><img src="${imgPath14}" alt="${imgAlt14}" ></div>`;
+                                                    console.log('14成功');
+                                                } else {
+                                                    imageHtml14 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('14エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv14 = document.getElementById("crowding14");
+                                                 crowdDiv14.innerHTML = imageHtml14;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding14"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">駐車場</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.15-->
+                            <!--高3-7-->
+                            <!--駐車場 ["模擬店", "屋外"]-->
+                            <li data-groups='["junre_3", "place_2"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-7</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue15 = data.values[15][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath15;
+                                                console.log(jsonValue15);
+                                                imgPathBase15 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt15 = '';
+                                                switch (jsonValue15) {
+                                                    case "1":
+                                                        imgPath15 = imgPathBase15 + "1.webp";
+                                                        imgAlt15 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath15 = imgPathBase15 + "2.webp";
+                                                        imgAlt15 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath15 = imgPathBase15 + "3.webp";
+                                                        imgAlt15 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath15 = imgPathBase15 + "4.webp";
+                                                        imgAlt15 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath15 = imgPathBase15 + "5.webp";
+                                                        imgAlt15 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath15 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml15;
+                                                if (imgPath15) {
+                                                    imageHtml15 = `<div><img src="${imgPath15}" alt="${imgAlt15}" ></div>`;
+                                                    console.log('15成功');
+                                                } else {
+                                                    imageHtml15 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('15エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv15 = document.getElementById("crowding15");
+                                                 crowdDiv15.innerHTML = imageHtml15;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding15"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">駐車場</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.16-->
+                            <!--高3-8-->
+                            <!--駐車場 ["模擬店", "屋外"]-->
+                            <li data-groups='["junre_3", "place_2"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-8</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue16 = data.values[16][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath16;
+                                                console.log(jsonValue16);
+                                                imgPathBase16 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt16 = '';
+                                                switch (jsonValue16) {
+                                                    case "1":
+                                                        imgPath16 = imgPathBase16 + "1.webp";
+                                                        imgAlt16 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath16 = imgPathBase16 + "2.webp";
+                                                        imgAlt16 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath16 = imgPathBase16 + "3.webp";
+                                                        imgAlt16 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath16 = imgPathBase16 + "4.webp";
+                                                        imgAlt16 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath16 = imgPathBase16 + "5.webp";
+                                                        imgAlt16 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath16 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml16;
+                                                if (imgPath16) {
+                                                    imageHtml16 = `<div><img src="${imgPath16}" alt="${imgAlt16}" ></div>`;
+                                                    console.log('16成功');
+                                                } else {
+                                                    imageHtml16 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('16エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv16 = document.getElementById("crowding16");
+                                                 crowdDiv16.innerHTML = imageHtml16;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding16"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">駐車場</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.17-->
+                            <!--高3-9-->
+                            <!--駐車場 ["模擬店", "屋外"]-->
+                            <li data-groups='["junre_3", "place_2"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-9</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue17 = data.values[17][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath17;
+                                                console.log(jsonValue17);
+                                                imgPathBase17 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt17 = '';
+                                                switch (jsonValue17) {
+                                                    case "1":
+                                                        imgPath17 = imgPathBase17 + "1.webp";
+                                                        imgAlt17 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath17 = imgPathBase17 + "2.webp";
+                                                        imgAlt17 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath17 = imgPathBase17 + "3.webp";
+                                                        imgAlt17 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath17 = imgPathBase17 + "4.webp";
+                                                        imgAlt17 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath17 = imgPathBase17 + "5.webp";
+                                                        imgAlt17 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath17 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml17;
+                                                if (imgPath17) {
+                                                    imageHtml17 = `<div><img src="${imgPath17}" alt="${imgAlt17}" ></div>`;
+                                                    console.log('17成功');
+                                                } else {
+                                                    imageHtml17 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('17エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv17 = document.getElementById("crowding17");
+                                                 crowdDiv17.innerHTML = imageHtml17;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding17"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">駐車場</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.18-->
+                            <!--高3-11-->
+                            <!--駐車場 ["模擬店", "屋外"]-->
+                            <li data-groups='["junre_3", "place_2"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-11</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue18 = data.values[18][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath18;
+                                                console.log(jsonValue18);
+                                                imgPathBase18 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt18 = '';
+                                                switch (jsonValue18) {
+                                                    case "1":
+                                                        imgPath18 = imgPathBase18 + "1.webp";
+                                                        imgAlt18 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath18 = imgPathBase18 + "2.webp";
+                                                        imgAlt18 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath18 = imgPathBase18 + "3.webp";
+                                                        imgAlt18 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath18 = imgPathBase18 + "4.webp";
+                                                        imgAlt18 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath18 = imgPathBase18 + "5.webp";
+                                                        imgAlt18 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath18 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml18;
+                                                if (imgPath18) {
+                                                    imageHtml18 = `<div><img src="${imgPath18}" alt="${imgAlt18}" ></div>`;
+                                                    console.log('18成功');
+                                                } else {
+                                                    imageHtml18 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('18エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv18 = document.getElementById("crowding18");
+                                                 crowdDiv18.innerHTML = imageHtml18;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding18"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">駐車場</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.19-->
+                            <!--高3-13-->
+                            <!--駐車場 ["模擬店", "屋外"]-->
+                            <li data-groups='["junre_3", "place_2"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">高3-13</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue19 = data.values[19][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath19;
+                                                console.log(jsonValue19);
+                                                imgPathBase19 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt19 = '';
+                                                switch (jsonValue19) {
+                                                    case "1":
+                                                        imgPath19 = imgPathBase19 + "1.webp";
+                                                        imgAlt19 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath19 = imgPathBase19 + "2.webp";
+                                                        imgAlt19 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath19 = imgPathBase19 + "3.webp";
+                                                        imgAlt19 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath19 = imgPathBase19 + "4.webp";
+                                                        imgAlt19 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath19 = imgPathBase19 + "5.webp";
+                                                        imgAlt19 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath19 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml19;
+                                                if (imgPath19) {
+                                                    imageHtml19 = `<div><img src="${imgPath19}" alt="${imgAlt19}" ></div>`;
+                                                    console.log('19成功');
+                                                } else {
+                                                    imageHtml19 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('19エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv19 = document.getElementById("crowding19");
+                                                 crowdDiv19.innerHTML = imageHtml19;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding19"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">駐車場</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.20-->
+                            <!--保護者休憩室1-->
+                            <!--1309 ["休憩", "屋内"]-->
+                            <li data-groups='["junre_5", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">保護者休憩室1</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue20 = data.values[20][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath20;
+                                                console.log(jsonValue20);
+                                                imgPathBase20 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt20 = '';
+                                                switch (jsonValue20) {
+                                                    case "1":
+                                                        imgPath20 = imgPathBase20 + "1.webp";
+                                                        imgAlt20 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath20 = imgPathBase20+ "2.webp";
+                                                        imgAlt20 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath20 = imgPathBase20 + "3.webp";
+                                                        imgAlt20 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath20 = imgPathBase20 + "4.webp";
+                                                        imgAlt20 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath20 = imgPathBase20 + "5.webp";
+                                                        imgAlt20 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath20 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml20;
+                                                if (imgPath20) {
+                                                    imageHtml20 = `<div><img src="${imgPath20}" alt="${imgAlt20}" ></div>`;
+                                                    console.log('20成功');
+                                                } else {
+                                                    imageHtml20 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('20エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv20 = document.getElementById("crowding20");
+                                                 crowdDiv20.innerHTML = imageHtml20;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding20"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1309教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.21-->
+                            <!--保護者休憩室2-->
+                            <!--1309 ["休憩", "屋内"]-->
+                            <li data-groups='["junre_5", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">保護者休憩室2</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue21 = data.values[21][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath21;
+                                                console.log(jsonValue21);
+                                                imgPathBase21 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt21 = '';
+                                                switch (jsonValue21) {
+                                                    case "1":
+                                                        imgPath21 = imgPathBase21 + "1.webp";
+                                                        imgAlt21 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath21 = imgPathBase21 + "2.webp";
+                                                        imgAlt21 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath21 = imgPathBase21 + "3.webp";
+                                                        imgAlt21 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath21 = imgPathBase21 + "4.webp";
+                                                        imgAlt21 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath21 = imgPathBase21 + "5.webp";
+                                                        imgAlt21 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath21 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml21;
+                                                if (imgPath21) {
+                                                    imageHtml21 = `<div><img src="${imgPath21}" alt="${imgAlt21}" ></div>`;
+                                                    console.log('21成功');
+                                                } else {
+                                                    imageHtml21 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('21エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv21 = document.getElementById("crowding21");
+                                                 crowdDiv21.innerHTML = imageHtml21;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding21"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1409教室</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--No.22-->
+                            <!--購買-->
+                            <!--1階ピロティ-->
+                            <li data-groups='["junre_6", "place_1"]'>
+                                <div class="card" style="box-shadow: 0 0 5px rgb(82, 82, 82);">
+                                    <div style="text-align: center;"></div>
+                                    <div class="card-body">
+                                        <p class="card-title" style="color: black; text-align: center;">購買</p>
+                                        <div id="json-data"></div>
+                                        <script>
+                                            // GitHubのAPIからJSONデータを取得する
+                                            fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                            .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                            .then(data => {
+                                                // JSONデータから値を取得する
+                                                const jsonValue22 = data.values[22][1]; // 例としてpublic_reposの値を取得
+                            
+                                                // 条件分岐を使って画像のパスを生成する
+                                                let imgPath22;
+                                                console.log(jsonValue22);
+                                                imgPathBase22 = "https://raw.githubusercontent.com/tchn1gist/sh-fes_crowd/main/imgs/";
+                                                imgAlt22 = '';
+                                                switch (jsonValue22) {
+                                                    case "1":
+                                                        imgPath22 = imgPathBase22 + "1.webp";
+                                                        imgAlt22 = '空いている';
+                                                        break;
+                                                    case "2":
+                                                        imgPath22 = imgPathBase22 + "2.webp";
+                                                        imgAlt22 = '空いている';
+                                                        break;
+                                                    case "3":
+                                                        imgPath22 = imgPathBase22 + "3.webp";
+                                                        imgAlt22 = '普通';
+                                                        break;
+                                                    case "4":
+                                                        imgPath22 = imgPathBase22 + "4.webp";
+                                                        imgAlt22 = '混んでいる';
+                                                        break;
+                                                    case "5":
+                                                        imgPath22 = imgPathBase22 + "5.webp";
+                                                        imgAlt22 = 'とても混んでいる';
+                                                        break;
+                                                    default:
+                                                        imgPath22 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                        break;
+                                                }
+                                                
+                                                // 画像が存在する場合はHTMLを生成する
+                                                let imageHtml22;
+                                                if (imgPath22) {
+                                                    imageHtml22 = `<div><img src="${imgPath22}" alt="${imgAlt22}" ></div>`;
+                                                    console.log('22成功');
+                                                } else {
+                                                    imageHtml22 = ""; // 画像が存在しない場合には空の文字列を設定
+                                                    console.log('22エラー');
+                                                }
+                            
+                                                 // 例: <img src="./images/3.jpg" alt="画像">
+                                                 let crowdDiv22 = document.getElementById("crowding22");
+                                                 crowdDiv22.innerHTML = imageHtml22;
+                                                 
+                                            })
+                                            .catch(error => console.error(error));
+                                            
+                            
+                                        </script>
+                                        <div id="crowding22"></div>
+                                        <div class="p-2 mb-2 bg-light" style="color: gray;">1階ピロティ</div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- shuffle_js終-->
         <div class="py-8"></div>
-        <div></div> 
-
+          
+        <div id="howto" class="max-w-5xl mx-auto bg-white p-4 rounded-lg shadow-lg">
+          <h1 class="text-2xl font-bold mb-2">How to use</h1>
+          <div class="border-b border-gray-400"></div>
+          <p class="text-gray-700 mt-2"><br>◎混雑度を5段階で表示しています<br>青から赤になるにつれて混雑度が高いことを意味します</p>
+          <p class="text-gray-700 mt-2"><br>◎絞り込み検索ができます<br>展示の種類・屋内/屋外で絞り込むことができます</p>
+          <p class="text-red-500 mt-2">＊通信状況によっては，更新ができない場合がありますがご了承ください</p>
+          <div class="mt-3 flex">
+              <div class="w-1/2"><a href="#howto"><button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">詳しい利用方法</button></a></div>
+              <div class="w-1/2"><a href="https://www.sh-fes.com/"><button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-800 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">栄東祭 HP へ</button></a></div>
+          </div>
+        </div>
 
           <!--時刻-->
           <div class="relative">
@@ -243,32 +1911,6 @@
         </div>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
